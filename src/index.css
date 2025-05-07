@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: FragmentMono;
+  src: url(/fonts/FragmentMono-Regular.ttf);
+}
+@font-face {
+  font-family: Rethink-Sans;
+  src: url(/fonts/RethinkSans-Regular.ttf); 
+}
+@font-face {
+  font-family: Gt-Planer-L;
+  src: url(/fonts/GT-Planar-Light-Trial-BF63bcd77b74df6.otf);
+}
+@font-face {
+  font-family: Gt-Planer-M;
+  src: url(/fonts/GT-Planar-Medium-Trial-BF63bcd77600d58.otf);
+}
+@font-face {
+  font-family: Gt-Planer-R;
+  src: url(/fonts/GT-Planar-Regular-Trial-BF63bcd9a5c44bb.otf);
+}
+
+@theme {
+  --font-Rethink-Sans: Rethink-Sans, "sans-serif";
+  --font-FragmentMono: FragmentMono;
+  --font-Gt-Planer-L: Gt-Planer-L;
+  --font-Gt-Planer-M: Gt-Planer-M;
+  --font-Gt-Planer-R: Gt-Planer-R;
+}
