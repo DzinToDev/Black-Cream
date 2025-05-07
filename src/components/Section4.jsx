@@ -79,7 +79,7 @@ const Section4 = () => {
   };
 
   return (
-    <div className="w-full h-[105vh] relative overflow-hidden bg-[#121111] px-22 py-18">
+    <div className="w-full h-[105vh] relative overflow-hidden bg-[#090A09] px-22 py-18">
       <div className="w-full h-full relative bg-amber-200">
         {/* Background Image */}
         <img
@@ -90,7 +90,7 @@ const Section4 = () => {
 
         {/* Bottom Left Text */}
         <div className="absolute bottom-10 left-10 text-white">
-          <h1 className="text-4xl font-bold drop-shadow-lg pb-2 font-Gt-Planer-L">
+          <h1 className="text-3xl font-bold drop-shadow-lg pb-2 font-Gt-Planer-L">
             {images[currentIndex].text}
           </h1>
           <p className="text-xs font-thin w-96 font-FragmentMono">
@@ -99,7 +99,7 @@ const Section4 = () => {
         </div>
 
         {/* Top Right Index */}
-        <div className="absolute top-10 right-10 text-black text-sm font-semibold tracking-wider bg-white px-4 py-1.5 rounded-sm font-FragmentMono">
+        <div className="absolute top-10 right-10 text-black text-sm font-thin tracking-wider bg-white px-4 py-1.5 rounded-sm font-FragmentMono">
           0{currentIndex + 1} / 0{images.length}
         </div>
 
@@ -121,20 +121,18 @@ const Section4 = () => {
           onDragEnd={handleDragEnd}
           className="absolute right-[30%] top-1/2 -translate-y-1/2 z-10"
         >
-          <div className="w-24 h-24 rounded-full border-2 border-white bg-transparent flex items-center justify-center relative">
+          <div className="w-20 h-20 rounded-full border-1 border-white bg-transparent flex items-center justify-center relative">
             {/* Perfectly Orbiting Dot */}
             <motion.div
-              className="absolute inset-0 flex items-center justify-center "
-              animate={{ rotate: 360 }}
-              transition={{
-                repeat: Infinity,
-                duration: TIMER_DURATION,
-                ease: "linear",
+              className="absolute inset-0 flex items-center justify-center"
+              style={{
+                rotate: timerProgress * 360, // Dynamically controlled rotation
               }}
             >
               <div className="w-2.5 h-2.5 bg-white rounded-full absolute top-[-6%]" />
+              <div className="w-2.5 h-2.5 bg-white rounded-full absolute bottom-[-6%]" />
             </motion.div>
-            <span className="text-white text-xs font-semibold tracking-wider">
+            <span className="text-white text-[10px] font-semibold tracking-wider">
               DRAG ME
             </span>
           </div>
