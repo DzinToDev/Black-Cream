@@ -9,8 +9,10 @@ import Section6 from "./components/Section6";
 import FAQSection from "./components/Faq";
 import Section7 from "./components/Section7";
 import Footer from "./components/Footer";
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <main className=" bg-[#242424] min-h-screen w-screen overflow-x-hidden">
       <NavBar />

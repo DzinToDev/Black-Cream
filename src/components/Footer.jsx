@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const links = [
   "home",
@@ -19,26 +22,34 @@ const Footer = () => {
   const letterTopRef = useRef([]);
   const letterBottomRef = useRef([]);
   const lineRefs = useRef([]);
+  const linkRefs = useRef([]);
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".footer-container",
+          start: "top 50%",
+        },
+      });
 
-    tl.fromTo(
-      [...letterTopRef.current, ...letterBottomRef.current],
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.1, duration: 1.2, ease: "power2.out" }
-    ).fromTo(
-      lineRefs.current,
-      { scaleX: 0, opacity: 0 },
-      { scaleX: 1, opacity: 0.8, duration: 1.2, ease: "power2.out" },
-      "<"
-    );
+      tl.fromTo(
+        [...letterTopRef.current, ...letterBottomRef.current],
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.1, duration: 1.2, ease: "power2.out" }
+      ).fromTo(
+        lineRefs.current,
+        { scaleX: 0, opacity: 0 },
+        { scaleX: 1, opacity: 0.8, duration: 1.2, ease: "power2.out" },
+        "<"
+      );
+    });
 
-    return () => tl.kill(); // Clean up on unmount
+    return () => ctx.revert(); // Cleanup
   }, []);
 
   return (
-    <div className="w-full h-screen bg-[url('/img/section4-1.png')] bg-cover relative overflow-hidden">
+    <div className="footer-container w-full h-screen bg-[url('/img/section4-1.png')] bg-cover relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[#090A09] opacity-90 z-0"></div>
       <div className="w-full h-full flex flex-col items-center justify-end gap-20 relative z-10">
         {/* Centered Letters & Image */}
@@ -87,15 +98,22 @@ const Footer = () => {
           {[...Array(3)].map((_, colIndex) => (
             <ul
               key={colIndex}
-              className="text-[9px] font-FragmentMono capitalize font-thin text-white flex flex-col gap-1"
+              className="text-[9px] font-FragmentMono capitalize font-thin text-white flex flex-col gap-1 overflow-hidden"
             >
               {links.map((link, index) => (
-                <li key={index} className="group relative inline-block">
-                  <span className="relative z-10 group-hover:text-black transition-all duration-300">
-                    <span className="relative z-10">{link}</span>
-                    <span className="absolute left-0 bottom-0 h-full w-0 bg-white z-0 group-hover:w-full transition-all duration-300 ease-in-out"></span>
-                  </span>
-                </li>
+                <div key={index} className="overflow-hidden">
+                  <li
+                    className="group relative inline-block translate-y-0 opacity-100"
+                    ref={(el) =>
+                      (linkRefs.current[index + colIndex * links.length] = el)
+                    }
+                  >
+                    <span className="relative z-10 group-hover:text-black transition-all duration-300">
+                      <span className="relative z-10">{link}</span>
+                      <span className="absolute left-0 bottom-0 h-full w-0 bg-white z-0 group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                    </span>
+                  </li>
+                </div>
               ))}
             </ul>
           ))}
