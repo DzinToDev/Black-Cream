@@ -72,7 +72,7 @@ const Footer = () => {
             ></div>
             <div
               ref={(el) => (lineRefs.current[1] = el)}
-              className="absolute w-[107%] 2xl:w-[101%] h-[1px] bg-[#454545] opacity-80 rotate-[-20.5deg] 2xl:rotate-[-16deg]"
+              className="absolute w-[107%] 2xl:w-[102%] h-[1px] bg-[#454545] opacity-80 rotate-[-20.5deg] 2xl:rotate-[-15deg]"
             ></div>
             <img
               src="/img/cream-black.png"
