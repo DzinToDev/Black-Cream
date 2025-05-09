@@ -31,7 +31,7 @@ const Section3 = () => {
       <div className="container w-[72%] h-[87%] flex items-start text-white z-10 relative">
         {/* Left Image */}
         <img
-          className="w-[51%] h-full object-cover object-top"
+          className="w-[51%] h-full object-cover object-top 2xl:object-center"
           src="/img/section3.png"
           alt=""
         />
