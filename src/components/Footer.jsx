@@ -68,7 +68,7 @@ const Footer = () => {
           <div className="relative w-[60%] h-[55%] border border-[#2d2d2d] bg-[#11111124] flex justify-center items-center">
             <div
               ref={(el) => (lineRefs.current[0] = el)}
-              className="absolute w-[107%] 2xl:w-[100%] h-[1px] bg-[#454545] opacity-40 rotate-[20deg] z-10"
+              className="absolute w-[107%] 2xl:w-[100%] h-[1px] bg-[#454545] opacity-40 rotate-[20deg] 2xl:rotate-[21deg] z-10"
             ></div>
             <div
               ref={(el) => (lineRefs.current[1] = el)}
