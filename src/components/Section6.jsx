@@ -1,56 +1,37 @@
 import React, { useState } from "react";
-import { GoPlus } from "react-icons/go";
+import CardWithHover from "../components/CardWithHover";
+import AnimatedText from "./AnimatedText";
 
 const Section6 = () => {
-  const [activeIndex, setActiveIndex] = useState(1); // second card visible by default
+  const [activeIndex, setActiveIndex] = useState(1);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const cards = [1, 2, 3];
 
   return (
     <div className="w-full h-dvh bg-[#090A09] text-white flex flex-col items-center justify-center">
-      <p className="font-FragmentMono text-sm font-thin mb-6">
-        Your Daily Routine
-      </p>
-      <div className="w-10/12 h-2/3">
+      <AnimatedText
+        text="Your Daily Routine"
+        className="font-FragmentMono text-sm font-thin h-fit"
+      />
+
+      <div className="w-10/12 h-2/3 mt-6">
         <img
           className="w-full h-[62%] object-cover object-top rounded-sm"
           src="/img/section5.png"
           alt=""
         />
         <div className="card w-full h-[38%] py-4 flex justify-between gap-4">
-          {cards.map((_, index) => {
-            const isVisible =
-              hoveredIndex === index ||
-              (hoveredIndex === null && activeIndex === index);
-            return (
-              <div
-                key={index}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => {
-                  setHoveredIndex(null);
-                  setActiveIndex(index);
-                }}
-                className={`w-[32%] h-full rounded-lg p-4 flex items-center transition-all duration-300 cursor-pointer ${
-                  isVisible ? "opacity-100" : "opacity-40"
-                } bg-white text-black`}
-              >
-                <div className="w-1/2">
-                  <h3 className="font-Gt-Planer-L font-thin">
-                    Ultra-Gentle foaming facial cleanser
-                  </h3>
-                  <p className="text-xs my-2 font-FragmentMono">$ 79.00 USD</p>
-                  <button className="text-xs flex items-center gap-1 font-FragmentMono">
-                    <GoPlus /> Add To Cart
-                  </button>
-                </div>
-                <img
-                  className="w-1/2 h-full rounded-lg"
-                  src="/img/cream-black.png"
-                  alt=""
-                />
-              </div>
-            );
-          })}
+          {cards.map((_, index) => (
+            <CardWithHover
+              key={index}
+              index={index}
+              hoveredIndex={hoveredIndex}
+              setHoveredIndex={setHoveredIndex}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+              layout="horizontal"
+            />
+          ))}
         </div>
       </div>
     </div>

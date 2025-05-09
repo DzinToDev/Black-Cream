@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BsBoxSeam } from "react-icons/bs";
 import { motion } from "framer-motion";
+import AnimatedText from "./AnimatedText";
 
 const content = [
   {
@@ -37,13 +38,14 @@ const Section3 = () => {
 
         {/* Text and Items */}
         <div className="px-14 py-11 w-[45%] relative">
-          <p className="text-[10px] font-thin font-FragmentMono mb-1.5">
-            Happiness Guarantee
-          </p>
-          <h2 className="text-3xl font-Gt-Planer-L z-10 relative">
-            Love it, or it's on us.
-          </h2>
-
+          <AnimatedText
+            text="Happiness Guarantee"
+            className="text-[10px] font-thin font-FragmentMono mb-1.5"
+          />
+          <AnimatedText
+            text="Love it, or it's on us."
+            className="text-3xl font-Gt-Planer-L z-10 relative"
+          />
           <div className="relative mt-4">
             {/* Hovered Background Highlighter */}
             <motion.div
