@@ -22,7 +22,7 @@ const Product = ({ image }) => {
       
     >
       {/* Image and Add button */}
-      <div className="pro-img relative">
+      <div className="pro-img w-full relative">
         <img
           className="h-96 object-cover object-top w-full rounded-sm"
           src={image}
@@ -31,7 +31,7 @@ const Product = ({ image }) => {
 
         <motion.div
           variants={scaleVariant}
-          className="add absolute bg-white bottom-0 right-0 w-11 h-9 rounded-sm z-50 text-black flex justify-center items-center transition-transform duration-300 group-hover:scale-120"
+          className="add absolute bg-white bottom-1 right-1 w-11 h-9 rounded-sm z-50 text-black flex justify-center items-center transition-transform duration-300 group-hover:scale-120"
         >
           <GoPlus />
         </motion.div>

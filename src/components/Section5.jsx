@@ -7,7 +7,7 @@ const Section5 = () => {
       <div className="left w-[23%] h-full flex items-end">
         <img
           data-scroll
-          data-scroll-speed="0.04"
+          data-scroll-speed="0.05"
           src="/img/section5-l.png"
           alt=""
         />
@@ -44,7 +44,7 @@ const Section5 = () => {
       <div className="right w-[23%] h-full">
         <img
           data-scroll
-          data-scroll-speed="0.03"
+          data-scroll-speed="0.04"
           src="/img/section5-r.png"
           alt=""
         />

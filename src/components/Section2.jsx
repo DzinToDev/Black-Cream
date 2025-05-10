@@ -45,7 +45,7 @@ const Section2 = () => {
           >
             <Button>
               <div className="overflow-hidden">
-                <AnimatedText text="Larn more about us" />
+                <AnimatedText index={3} text="Larn more about us" />
               </div>
             </Button>
           </motion.div>
@@ -53,14 +53,14 @@ const Section2 = () => {
       </div>
 
       {/* More Products Section */}
-      <div className="more-products text-white mt-40">
+      <div className="more-products text-white mt-40 w-full">
         <div className=" w-fit">
           <AnimatedText
             text="Discover more for your skin"
             className="font-Gt-Planer-L text-3xl"
           />
         </div>
-        <div className="product flex gap-8 py-8">
+        <div className="product flex gap-8 py-8 w-full">
           <Product image="/img/prod1.png" />
           <Product image="/img/prod2.png" />
           <Product image="/img/prod3.png" />

@@ -53,6 +53,7 @@ const Hero = () => {
                 text="Shop now"
                 className="block"
                 delay={0.4}
+                index={0}
               />
             </div>
           </Button>

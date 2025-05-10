@@ -49,7 +49,7 @@ const Section3 = () => {
           <div className="relative mt-4">
             {/* Hovered Background Highlighter */}
             <motion.div
-              className="absolute left-0 w-full h-[84px] bg-[#403e3e] rounded-sm z-0"
+              className="absolute left-0 w-full h-[84px] bg-[#2d2d2d] rounded-sm z-0"
               animate={{ top: hoverY }}
               transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
             />
