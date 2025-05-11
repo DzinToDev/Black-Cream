@@ -63,7 +63,7 @@ const Loader = ({ onComplete }) => {
 
       <div className=" overflow-hidden">
         {/* Progress Bar */}
-        <div className="p-bar w-[200px] h-0.5 bg-gray-600 relative mt-4 mb-6 ">
+        <div className="p-bar w-48 h-[3px] bg-gray-600 relative mt-4 mb-6 ">
           <div
             className="absolute top-0 left-0 h-full bg-white"
             style={{ width: `${count}%`, transition: "width 0.3s ease" }}
@@ -71,7 +71,7 @@ const Loader = ({ onComplete }) => {
         </div>
       </div>
       {/* Counter */}
-      <div className="absolute bottom-6 right-8 h-12 w-34 overflow-hidden text-5xl font-Gt-Planer-M text-right flex items-end justify-end">
+      <div className="absolute bottom-10 right-12 h-12 w-34 overflow-hidden text-5xl font-Gt-Planer-M text-right flex items-end justify-end">
         <div ref={counterRef}>{count}%</div>
       </div>
     </div>

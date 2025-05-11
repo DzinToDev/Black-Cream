@@ -62,7 +62,7 @@ const Product = ({ image }) => {
         {/* Add button above overlay */}
         <motion.div
           variants={buttonVariant}
-          className="add absolute bottom-1 right-1 w-11 h-9 bg-white rounded-sm z-20 text-black flex justify-center items-center transition-transform duration-300 group-hover:scale-110"
+          className="add absolute bottom-1.5 right-1.5 w-11 h-9 bg-white rounded-sm z-20 text-black flex justify-center items-center transition-transform duration-300 group-hover:scale-110"
         >
           <GoPlus />
         </motion.div>
