@@ -63,7 +63,7 @@ const Loader = ({ onComplete }) => {
 
       <div className=" overflow-hidden">
         {/* Progress Bar */}
-        <div className="p-bar w-[200px] h-[1px] bg-gray-600 relative mt-4 mb-6 ">
+        <div className="p-bar w-[200px] h-0.5 bg-gray-600 relative mt-4 mb-6 ">
           <div
             className="absolute top-0 left-0 h-full bg-white"
             style={{ width: `${count}%`, transition: "width 0.3s ease" }}
