@@ -19,12 +19,12 @@ const Hero = () => {
       <div
         data-scroll
         data-scroll-speed="0.1"
-        className="w-1/2 h-full py-36 px-26 text-white flex flex-col"
+        className="w-full lg:w-1/2 h-full py-36 px-26 text-white flex flex-col"
       >
         <AnimatedText
           as="h1"
           text="Glow naturally"
-          className="text-6xl font-Gt-Planer-R leading-[1.1]"
+          className="text-4xl lg:text-6xl font-Gt-Planer-R leading-[1.1]"
           delay={0}
         />
         <AnimatedText
@@ -99,11 +99,18 @@ const Hero = () => {
           >
             <img src="/img/cream-black.png" alt="" className="rounded-lg" />
           </motion.div>
+          <div className="flex gap-3 pl-0.5">
           <AnimatedText
-            text="$ 79.00 USD  $ 99.00 USD"
+            text="$ 79.00 USD"
             className="text-xs mt-2"
             delay={0.4}
           />
+          <AnimatedText
+            text="$ 99.00 USD"
+            className="text-xs mt-2 text-gray-400"
+            delay={0.4}
+          />
+          </div>
         </motion.div>
       </div>
     </div>
