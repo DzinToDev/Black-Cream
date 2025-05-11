@@ -123,9 +123,8 @@ const NavBar = () => {
 
               <div className="menu-items flex flex-col gap-6 h-96 justify-center pl-10">
                 {["Home", "Shop", "About", "Contact"].map((item, index) => (
-                  <div className=" overflow-hidden">
+                  <div className=" overflow-hidden" key={index}>
                     <motion.div
-                      key={index}
                       custom={index}
                       initial="hidden"
                       animate="visible"
