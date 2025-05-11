@@ -1,12 +1,45 @@
-# React + Vite
+# 🌐 Black Cream Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a beautiful and professional website developed in React under the mentorship of **Gaurav Mali Bhaiya**, founder of **Undream Studio**.  
+The site focuses on smooth animations, modern UI/UX, and pixel-perfect development inspired directly from Figma designs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Site
 
-## Expanding the ESLint configuration
+🔗 [Live Website Link](https://black-cream.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+
+| Home Page | Interaction |
+|-----------|-------------|
+| ![Home](/public/screenshots/hero.png) | 
+![Interaction](/public/screenshots/hero-menu.png) |
+![Interaction](/public/screenshots/product.png) |
+![Interaction](/public/screenshots/slide.png) |
+
+| Animation | Footer |
+|-----------|--------|
+| ![Animation](/public/screenshots/slide-timer.png) | | ![Animation](/public/screenshots/grid.png) | ![Footer](/public/screenshots/footer.png) |
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js**
+- **Tailwind CSS**
+- **GSAP (GreenSock)**
+- **Framer Motion**
+- **Locomotive Scroll**
+- **React Icons**
+
+---
+
+## 📚 Learning Journey
+
+This project was a part of my learning journey to understand how professional UI/UX designers think and work.  
+Big thanks to **Gaurav Mali Bhaiya** for personally guiding me and helping me learn the real behind-the-scenes of design-to-dev workflows.  
+Check out his Twitch streams for more insights:  
+🎥 [Twitch Channel – twitch.tv/djmaliboy](https://www.twitch.tv/djmaliboy/videos)
