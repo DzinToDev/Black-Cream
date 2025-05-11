@@ -16,13 +16,15 @@ The site focuses on smooth animations, modern UI/UX, and pixel-perfect developme
 | Home Page | Interaction |
 |-----------|-------------|
 | ![Home](/public/screenshots/hero.png) | 
-![Interaction](/public/screenshots/hero-menu.png) |
-![Interaction](/public/screenshots/product.png) |
+![Menu](/public/screenshots/hero-menu.png) |
+![Products](/public/screenshots/product.png) |
 ![Interaction](/public/screenshots/slide.png) |
 
 | Animation | Footer |
 |-----------|--------|
-| ![Animation](/public/screenshots/slide-timer.png) | | ![Animation](/public/screenshots/grid.png) | ![Footer](/public/screenshots/footer.png) |
+| ![Animation](/public/screenshots/slide-timer.png) | 
+| ![Cards](/public/screenshots/grid.png) | 
+![Footer](/public/screenshots/footer.png) |
 
 ---
 
