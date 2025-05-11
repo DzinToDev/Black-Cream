@@ -51,10 +51,10 @@ const Loader = ({ onComplete }) => {
       ref={loaderRef}
       className="fixed top-0 left-0 h-screen w-screen bg-black text-white z-[9999] flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="overflow-hidden">
+      <div className="overflow-hidden h-10 flex items-center">
         <div
           ref={logoRef}
-          className="relative overflow-hidden flex items-center gap-2 text-sm uppercase tracking-widest h-fit"
+          className="relative overflow-hidden flex items-center gap-2 text-sm uppercase tracking-widest "
         >
           <span className="border border-white px-2 py-0.5">B</span>
           <span>BLACK CREAM</span>
