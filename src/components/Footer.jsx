@@ -23,16 +23,19 @@ const Footer = () => {
   const letterBottomRef = useRef([]);
   const lineRefs = useRef([]);
   const linkRefs = useRef([]);
+  const imgRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // ===== ScrollTrigger Timeline =====
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".footer-container",
           start: "top 50%",
         },
       });
-
+  
       tl.fromTo(
         [...letterTopRef.current, ...letterBottomRef.current],
         { y: 20, opacity: 0 },
@@ -43,10 +46,46 @@ const Footer = () => {
         { scaleX: 1, opacity: 0.8, duration: 1.2, ease: "power2.out" },
         "<"
       );
+  
+      // ===== Magnet Hover Effect =====
+      const img = imgRef.current;
+      const container = containerRef.current;
+  
+      const handleMouseMove = (e) => {
+        const bounds = container.getBoundingClientRect();
+        const x = e.clientX - bounds.left - bounds.width / 2;
+        const y = e.clientY - bounds.top - bounds.height / 2;
+  
+        gsap.to(img, {
+          x: x * 0.1,
+          y: y * 0.1,
+          ease: "power3.out",
+          duration: 0.4,
+        });
+      };
+  
+      const handleMouseLeave = () => {
+        gsap.to(img, {
+          x: 0,
+          y: 0,
+          ease: "power3.out",
+          duration: 0.6,
+        });
+      };
+  
+      container.addEventListener("mousemove", handleMouseMove);
+      container.addEventListener("mouseleave", handleMouseLeave);
+  
+      // Cleanup on unmount
+      return () => {
+        container.removeEventListener("mousemove", handleMouseMove);
+        container.removeEventListener("mouseleave", handleMouseLeave);
+      };
     });
-
-    return () => ctx.revert(); // Cleanup
+  
+    return () => ctx.revert(); // Cleanup context
   }, []);
+  
 
   return (
     <div className="footer-container w-full h-screen bg-[url('/img/section4-1.png')] bg-cover relative overflow-hidden">
@@ -65,7 +104,7 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="relative w-[60%] h-[55%] border border-[#2d2d2d] bg-[#11111124] flex justify-center items-center">
+          <div ref={containerRef} className="relative w-[60%] h-[55%] border border-[#2d2d2d] bg-[#11111124] flex justify-center items-center">
             <div
               ref={(el) => (lineRefs.current[0] = el)}
               className="absolute w-[107%] 2xl:w-[102%] h-[1px] bg-[#454545] opacity-40 rotate-[20deg] 2xl:rotate-[16deg] z-10"
@@ -75,6 +114,7 @@ const Footer = () => {
               className="absolute w-[107%] 2xl:w-[102%] h-[1px] bg-[#454545] opacity-80 rotate-[-20.5deg] 2xl:rotate-[-16deg]"
             ></div>
             <img
+             ref={imgRef}
               src="/img/cream-black.png"
               alt=""
               className="w-1/2 h-3/4 object-cover z-20"
