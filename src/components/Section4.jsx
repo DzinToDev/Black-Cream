@@ -9,10 +9,10 @@ import {
 import AnimatedText from "./AnimatedText";
 
 const images = [
-  { url: "/img/section4-1.png", text: "Revitalizing Face Cream", para: "..." },
-  { url: "/img/section4-2.jpg", text: "Hydrating Serum Glow", para: "..." },
-  { url: "/img/section4-3.png", text: "Night Repair Elixir", para: "..." },
-  { url: "/img/section4-4.jpg", text: "Vitamin C Brightener", para: "..." },
+  { url: "/img/section4-1.png", text: "Revitalizing Face Cream", para: "B Black cream is the only cream that clear pimples, wrinkles, marks, hives even shadows under the eyes and turns your skin white. B Black whitening cream makes your face softer brighter and fairer, B Black whitening cream is useful to removes surface scars." },
+  { url: "/img/section4-2.jpg", text: "Hydrating Serum Glow", para: "B Black cream is the only cream that clear pimples, wrinkles, marks, hives even shadows under the eyes and turns your skin white. B Black whitening cream makes your face softer brighter and fairer, B Black whitening cream is useful to removes surface scars." },
+  { url: "/img/section4-3.png", text: "Night Repair Elixir", para: "B Black cream is the only cream that clear pimples, wrinkles, marks, hives even shadows under the eyes and turns your skin white. B Black whitening cream makes your face softer brighter and fairer, B Black whitening cream is useful to removes surface scars." },
+  { url: "/img/section4-4.jpg", text: "Vitamin C Brightener", para: "B Black cream is the only cream that clear pimples, wrinkles, marks, hives even shadows under the eyes and turns your skin white. B Black whitening cream makes your face softer brighter and fairer, B Black whitening cream is useful to removes surface scars." },
 ];
 
 const TIMER_DURATION = 6;

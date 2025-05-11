@@ -28,6 +28,7 @@ const Section3 = () => {
 
   return (
     <div className="w-full h-dvh bg-black flex items-end justify-center relative overflow-hidden">
+      <img className="absolute z-0" src="/img/Vector.png" alt="" />
       <div className="container w-[72%] h-[87%] flex items-start text-white z-10 relative">
         {/* Left Image */}
         <img
@@ -49,7 +50,7 @@ const Section3 = () => {
           <div className="relative mt-4">
             {/* Hovered Background Highlighter */}
             <motion.div
-              className="absolute left-0 w-full h-[84px] bg-[#2d2d2d] rounded-sm z-0"
+              className="absolute left-0 w-full h-[84px] bg-[#212121] rounded-sm z-0"
               animate={{ top: hoverY }}
               transition={{ duration: 0.4, ease: [0.76, 0, 0.24, 1] }}
             />
