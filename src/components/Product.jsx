@@ -56,7 +56,7 @@ const Product = ({ image }) => {
         {/* Gray overlay that falls to bottom-right */}
         <motion.div
           variants={overlayVariant}
-          className="absolute top-0 left-0 w-full h-full bg-gray-300 z-10"
+          className="absolute top-0 left-0 w-full h-full bg-gray-200 z-10 rounded-sm"
         />
 
         {/* Add button above overlay */}
